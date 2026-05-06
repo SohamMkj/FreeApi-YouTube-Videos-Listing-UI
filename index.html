@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>YouTube Video Listing</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="bg-[#0f0f0f] text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-[#121212] sticky top-0 z-50 border-b border-gray-800">
+
+    <div class="flex items-center gap-4">
+      <i class="ri-menu-line text-2xl cursor-pointer"></i>
+
+      <div class="flex items-center gap-2">
+        <i class="ri-youtube-fill text-red-600 text-4xl"></i>
+        <h1 class="text-2xl font-bold tracking-wide">YouTube</h1>
+      </div>
+    </div>
+
+    <div class="hidden md:flex items-center bg-[#222] rounded-full px-4 py-2 w-[40%]">
+      <input
+        type="text"
+        placeholder="Search"
+        class="bg-transparent outline-none flex-1 text-white"
+      />
+
+      <i class="ri-search-line text-xl"></i>
+    </div>
+
+    <div class="flex items-center gap-5">
+      <i class="ri-video-add-line text-2xl cursor-pointer"></i>
+      <i class="ri-notification-3-line text-2xl cursor-pointer"></i>
+
+      <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center font-bold">
+        S
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Loading -->
+  <div
+    id="loading"
+    class="flex justify-center items-center py-20 text-2xl font-semibold"
+  >
+    Loading videos...
+  </div>
+
+  <!-- Error -->
+  <div
+    id="error"
+    class="hidden text-center text-red-500 text-xl py-10"
+  >
+  </div>
+
+  <!-- Videos Grid -->
+  <main
+    id="videoContainer"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6"
+  >
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
